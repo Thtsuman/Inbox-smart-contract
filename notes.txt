@@ -1,0 +1,37 @@
+// testing with mocha
+
+// test class for testing 
+class Car {
+  park() {
+    return 'Stopped!'
+  }
+  
+  drive() {
+    return 'Vroom!'
+  }
+}
+
+
+let testCar;
+
+// beforeEach will invoke each time an "it" function runs
+beforeEach(() => {
+ testCar = new Car()
+})
+
+// describe help to group "it" funcitons
+describe('Car', () => {
+
+  // it function help to structure the test subjects
+  it('has park function', () => {
+    assert.equal(testCar.park(), 'Stopped!')
+  })
+
+  it('has drive function', () => {
+    assert.equal(testCar.drive(), 'Vroom!')
+  })
+})
+
+
+-------------------------------------------------------------
+
